@@ -1,0 +1,18 @@
+name: "Podcast Generator - First Marketplace Release"
+author: "Brayden Vernon"
+description: "Generates a feed for podcast from YAML file"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: The commiter's email address
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: The commiters name
+    required: true
+    default: ${{ github.actor }}
